@@ -44,6 +44,7 @@ jobs:
           curl -X POST -u '${{ secrets.SONAR_TOKEN }}:' 'https://sonarcloud.io/api/project_branches/rename' -d 'name=main' -d 'project=${{ github.event.repository.name }}'
         fi
         set -e
+        
 
     - name: Validando tipo de proyecto
       id: tipoProyecto
@@ -71,7 +72,7 @@ jobs:
     - name: Enable execution gradlew
       run: | 
         chmod 777 gradlew
-    
+
     - name: Run SonarQube analysis
       run: |
         ./gradlew sonarqube \
