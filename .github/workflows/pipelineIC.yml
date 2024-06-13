@@ -57,11 +57,6 @@ jobs:
           echo "tipo de proyecto desconocido"
         fi
 
-    - name: Enable execution gradlew
-      run: | 
-        chmod 777 gradlew
-    
-
     - name: Run SonarQube analysis
       run: |
         ./gradlew sonarqube \
