@@ -26,7 +26,7 @@ jobs:
     - name: Validan tipo de proyecto
       id: tipoProyecto
       run: |
-        if [-f "build.gradle"]
+        if [ -f "build.gradle" ]
         then
           echo "proyecto Java"
           if grep -q 'id "org.sonarqube" version "3.3"' buid.gradle
