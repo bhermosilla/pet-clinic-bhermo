@@ -61,6 +61,7 @@ jobs:
       run: | 
         chmod 777 gradlew
     
+        
     - name: Run SonarQube analysis
       run: |
         ./gradlew sonarqube \
