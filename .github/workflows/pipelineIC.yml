@@ -2,7 +2,7 @@ name: Workflow
 on:
   push:
     branches:
-      - feat-devsecops
+      - feat-devsecoops
 
 jobs:        
   SAST:
@@ -44,7 +44,7 @@ jobs:
           curl -X POST -u '${{ secrets.SONAR_TOKEN }}:' 'https://sonarcloud.io/api/project_branches/rename' -d 'name=main' -d 'project=${{ github.event.repository.name }}'
         fi
         set -e
-        
+
 
     - name: Validando tipo de proyecto
       id: tipoProyecto
